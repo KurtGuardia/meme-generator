@@ -1,8 +1,8 @@
 import logo from '../imgs/logo.svg';
 
-function NavBar() {
+export default function NavBar() {
   return (
-    <nav className='nav'>
+    <nav className='nav purple'>
       <div className='nav__logo'>
         <img src={logo} alt='meme' className='nav__logo--img' />
         <h2 className='nav__logo--title'>Meme Generator</h2>
@@ -11,5 +11,3 @@ function NavBar() {
     </nav>
   );
 }
-
-export default NavBar;

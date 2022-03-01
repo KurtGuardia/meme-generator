@@ -51,9 +51,12 @@ code {
   }
 }
 
+.purple {
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+}
+
 .nav {
   display: flex;
-  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
   height: 10rem;
   color: #fff;
   width: 100;
@@ -76,4 +79,31 @@ code {
 
 .nav__logo--title {
   font-size: 48px;
+}
+
+form {
+  margin: 5rem;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.input input {
+  width: 45%;
+  height: 5rem;
+  border: 1px solid #d5d4d8;
+  border-radius: 5px;
+  font-size: 20px;
+  text-indent: 5px;
+}
+
+.btn {
+  width: 100%;
+  color: #fff;
+  height: 5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
