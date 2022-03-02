@@ -20,15 +20,32 @@ export default function Meme() {
     });
   }
 
+  function handleText(e) {
+    const { name, value } = e.target;
+    setMeme((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  }
+
   return (
     <>
       <div className='form'>
         <div className='input'>
-          <input type='text' placeholder='Top text' name='top' id='top-text' />
           <input
+            onChange={handleText}
+            type='text'
+            placeholder='Top text'
+            name='topText'
+            id='top-text'
+            value={meme.topText}
+          />
+          <input
+            value={meme.bottomText}
+            onChange={handleText}
             type='text'
             placeholder='Bottom text'
-            name='bottom'
+            name='bottomText'
             id='bottom-text'
           />
         </div>
@@ -36,7 +53,11 @@ export default function Meme() {
           Get a new meme image 🖼️
         </button>
       </div>
-      <img className='memeImg' src={meme.randomImage} alt='meme' />
+      <div className='meme'>
+        <img className='memeImg' src={meme.randomImage} alt='meme' />
+        <h2 className='meme__text top'>{meme.topText}</h2>
+        <h2 className='meme__text bottom'>{meme.bottomText}</h2>
+      </div>
     </>
   );
 }
