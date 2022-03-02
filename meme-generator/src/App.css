@@ -59,7 +59,6 @@ code {
   display: flex;
   height: 10rem;
   color: #fff;
-  width: 100;
   justify-content: space-between;
 }
 
@@ -81,7 +80,7 @@ code {
   font-size: 48px;
 }
 
-form {
+.form {
   margin: 5rem;
 }
 
@@ -106,4 +105,9 @@ form {
   height: 5rem;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.memeImg {
+  width: 42rem;
+  margin-bottom: 5rem;
 }
